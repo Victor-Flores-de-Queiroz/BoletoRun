@@ -8,6 +8,8 @@ public class Challenge : MonoBehaviour
 
     public int show;
 
+    public bool parar;
+
     public GameObject spr1;
     public GameObject spr2;
     public GameObject spr3;
@@ -26,15 +28,26 @@ public class Challenge : MonoBehaviour
         block3 = spr3.GetComponent<Block>();
         show = 0;
         Restart();
+        parar = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         tr.position = tr.position - (tr.right*speed);
-        if(tr.position.x <= -14){
-            Restart();
+        if(!parar){
+            if(tr.position.x <= -14){
+                Restart();
+            }
+        }else{
+            if(speed>0.00000001f){
+                speed-=0.000075f;
+            }else{
+                speed = 0;
+            }
+            
         }
+        
     }
 
     void Restart(){

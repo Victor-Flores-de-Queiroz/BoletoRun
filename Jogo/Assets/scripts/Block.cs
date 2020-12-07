@@ -14,6 +14,7 @@ public class Block : MonoBehaviour
     public Sprite vinte_reais;
 
     public int value;
+    public int type;
 
     public int count;
     public bool next;
@@ -24,6 +25,7 @@ public class Block : MonoBehaviour
         sprR = GetComponent<SpriteRenderer>();
         next = false;
         touch = false;
+        type = 0;
     }
 
     // Update is called once per frame
@@ -41,31 +43,36 @@ public class Block : MonoBehaviour
         if(count == 0){
             sprR.sprite = duzentos_reais;
             value = 200;
+            type = 0;
         }else if(count == 1){
             sprR.sprite = cinco_reais;
             value = 5;
+            type = 0;
         }else if(count == 2){
             sprR.sprite = dez_reais;
             value = 10;
+            type = 0;
         }else if(count == 3){
             sprR.sprite = cem_reais;
             value = 100;
+            type = 0;
         }else if(count == 4){
             sprR.sprite = cinquenta_reais;
             value = 50;
+            type = 0;
         }else if(count == 5){
             sprR.sprite = vinte_reais;
             value = 20;
+            type = 0;
         }else{
             sprR.sprite = dois_reais;
             value = 2;
+            type = 0;
         }
     }
     //TODO: Fix the collision with player
     void OnTriggerEnter2D(Collider2D other){
-        //other.GetComponent<Player>().takeDamage(value);
-        //GetComponent<Transform>().GameObject.SetActive(false);
-        Debug.Log("Tocou!");
-        touch = true;
+        other.GetComponent<Player>().setScore(value);
+        GetComponent<Transform>().gameObject.SetActive(false);
     }
 }
