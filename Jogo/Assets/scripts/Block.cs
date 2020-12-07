@@ -12,6 +12,9 @@ public class Block : MonoBehaviour
     public Sprite cinquenta_reais;
     public Sprite cem_reais;
     public Sprite vinte_reais;
+    public Sprite icone_luz;
+    public Sprite icone_agua;
+    public Transform tr;
 
     public int value;
     public int type;
@@ -22,6 +25,7 @@ public class Block : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tr = GetComponent<Transform>();
         sprR = GetComponent<SpriteRenderer>();
         next = false;
         touch = false;
@@ -39,7 +43,7 @@ public class Block : MonoBehaviour
 
     void NextSprite()
     {
-        count = Random.Range(0,7);
+        count = Random.Range(0,9);
         if(count == 0){
             sprR.sprite = duzentos_reais;
             value = 200;
@@ -64,15 +68,29 @@ public class Block : MonoBehaviour
             sprR.sprite = vinte_reais;
             value = 20;
             type = 0;
-        }else{
+        }else if(count == 6){
             sprR.sprite = dois_reais;
             value = 2;
             type = 0;
+        }else if(count == 7){
+            sprR.sprite = icone_luz;
+            value = 1;
+            type = 1;
+        }else{
+            sprR.sprite = icone_agua;
+            value = 1;
+            type = 2;
         }
     }
     //TODO: Fix the collision with player
     void OnTriggerEnter2D(Collider2D other){
-        other.GetComponent<Player>().setScore(value);
+        if(type == 1){
+            other.GetComponent<Player>().upLight(value);
+        }else if(type == 2){
+            other.GetComponent<Player>().upWater(value);
+        }else {
+            other.GetComponent<Player>().setScore(value);
+        }
         GetComponent<Transform>().gameObject.SetActive(false);
     }
 }
