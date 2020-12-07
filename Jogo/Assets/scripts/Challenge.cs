@@ -32,13 +32,13 @@ public class Challenge : MonoBehaviour
     void Update()
     {
         tr.position = tr.position - (tr.right*speed);
-        if(tr.position.x <= -9.5f){
+        if(tr.position.x <= -14){
             Restart();
         }
     }
 
     void Restart(){
-        tr.position = new Vector2(9.5f,0);
+        tr.position = new Vector2(14,-1);
         DeactiveAll();
         show++;
         ActiveThisCase();

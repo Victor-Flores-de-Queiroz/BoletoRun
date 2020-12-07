@@ -17,11 +17,13 @@ public class Block : MonoBehaviour
 
     public int count;
     public bool next;
+    public bool touch;
     // Start is called before the first frame update
     void Start()
     {
         sprR = GetComponent<SpriteRenderer>();
         next = false;
+        touch = false;
     }
 
     // Update is called once per frame
@@ -63,6 +65,7 @@ public class Block : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         //other.GetComponent<Player>().takeDamage(value);
         //GetComponent<Transform>().GameObject.SetActive(false);
-        Debug.Log("Tocou no valor: "+value);
+        Debug.Log("Tocou!");
+        touch = true;
     }
 }
