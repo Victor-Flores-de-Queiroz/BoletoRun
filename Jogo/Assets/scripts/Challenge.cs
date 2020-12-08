@@ -9,10 +9,12 @@ public class Challenge : MonoBehaviour
     public int show;
 
     public bool parar;
+    public bool done;
 
     public GameObject spr1;
     public GameObject spr2;
     public GameObject spr3;
+    public Player player;
 
     private Block block1;
     private Block block2;
@@ -55,6 +57,7 @@ public class Challenge : MonoBehaviour
         DeactiveAll();
         show++;
         ActiveThisCase();
+        done = false;
     }
 
     void DeactiveAll(){

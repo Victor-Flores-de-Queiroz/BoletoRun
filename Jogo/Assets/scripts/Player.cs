@@ -104,14 +104,22 @@ public class Player : MonoBehaviour
 
     public void upLight(int lgt){
         lightTax+=lgt;
-        sl.value=lgt*10;
+        if(lgt>0){
+            sl.value=lgt*10;
+        }
         T_sprM.localScale = new Vector2((50*(lightTax+1))+(50*lightTax),50*(lightTax+1)+(50*lightTax));
         UpdateTextTop();
     }
 
     public void upWater(int wtr){
         waterTax+=wtr;
-        sl.value+=wtr*10;
+        if(wtr>0){
+            sl.value+=wtr*10;
+        }
         UpdateTextTop();
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        Debug.Log("Here");
     }
 }

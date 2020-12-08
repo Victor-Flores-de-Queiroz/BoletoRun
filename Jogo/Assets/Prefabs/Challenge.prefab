@@ -105,7 +105,8 @@ MonoBehaviour:
   cem_reais: {fileID: 3643436289782705507, guid: e2b15affa9f3a45498184b3af298745b, type: 3}
   vinte_reais: {fileID: -5860623791841329813, guid: e2b15affa9f3a45498184b3af298745b, type: 3}
   icone_luz: {fileID: 21300000, guid: 6a9ebff4a585ffd4da86c92dd3226937, type: 3}
-  icone_agua: {fileID: 21300000, guid: e1a8ff80434fc6c41aaa7c3415d23e61, type: 3}
+  icone_agua: {fileID: 21300000, guid: 11c7a854a2bbdea4f9d75f9f2ff1fa94, type: 3}
+  tr: {fileID: 0}
   value: 0
   type: 0
   count: 0
@@ -242,7 +243,8 @@ MonoBehaviour:
   cem_reais: {fileID: 3643436289782705507, guid: e2b15affa9f3a45498184b3af298745b, type: 3}
   vinte_reais: {fileID: -5860623791841329813, guid: e2b15affa9f3a45498184b3af298745b, type: 3}
   icone_luz: {fileID: 21300000, guid: 6a9ebff4a585ffd4da86c92dd3226937, type: 3}
-  icone_agua: {fileID: 21300000, guid: e1a8ff80434fc6c41aaa7c3415d23e61, type: 3}
+  icone_agua: {fileID: 21300000, guid: 11c7a854a2bbdea4f9d75f9f2ff1fa94, type: 3}
+  tr: {fileID: 0}
   value: 0
   type: 0
   count: 0
@@ -431,7 +433,8 @@ MonoBehaviour:
   cem_reais: {fileID: 3643436289782705507, guid: e2b15affa9f3a45498184b3af298745b, type: 3}
   vinte_reais: {fileID: -5860623791841329813, guid: e2b15affa9f3a45498184b3af298745b, type: 3}
   icone_luz: {fileID: 21300000, guid: 6a9ebff4a585ffd4da86c92dd3226937, type: 3}
-  icone_agua: {fileID: 21300000, guid: e1a8ff80434fc6c41aaa7c3415d23e61, type: 3}
+  icone_agua: {fileID: 21300000, guid: 11c7a854a2bbdea4f9d75f9f2ff1fa94, type: 3}
+  tr: {fileID: 0}
   value: 0
   type: 0
   count: 0
