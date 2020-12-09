@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
         }else{
             anim.SetBool("Dead",true);
             cll.parar=true;
+            
         }
     }
 
