@@ -10,6 +10,7 @@ public class Challenge : MonoBehaviour
 
     public bool parar;
     public bool done;
+    public bool so_luz;
 
     public GameObject spr1;
     public GameObject spr2;
@@ -28,6 +29,11 @@ public class Challenge : MonoBehaviour
         block1 = spr1.GetComponent<Block>();
         block2 = spr2.GetComponent<Block>();
         block3 = spr3.GetComponent<Block>();
+        if(so_luz){
+            block1.so_luz = true;
+            block2.so_luz = true;
+            block3.so_luz = true;
+        }
         show = 0;
         Restart();
         parar = false;
