@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     {
         tr = GetComponent<Transform>();
         T_sprM = sprM.GetComponent<Transform>();
-        T_sprM.localScale = new Vector3(350,350,1);
+        T_sprM.localScale = new Vector3(400,400,1);
         cll.so_luz = so_luz;
         upLight(2);
         sl.maxValue = PlayerMaxValue;
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
             }else{
                 countDead--;
                 if(countDead<=1){
-                    scl.LoadScene(1);
+                    scl.LoadScene(2);
                 }
             }
             
@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
                 boolLight = false;
             }
         }else{
-            if(T_sprM.localScale.x<350&&T_sprM.localScale.y<350){
+            if(T_sprM.localScale.x<400&&T_sprM.localScale.y<400){
                 T_sprM.localScale = new Vector3(T_sprM.localScale.x+0.5f,T_sprM.localScale.y+0.5f,1);
             }else{
                 boolLight = true;

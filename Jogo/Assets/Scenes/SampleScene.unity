@@ -692,6 +692,10 @@ PrefabInstance:
       propertyPath: so_luz
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 561846855, guid: fa756a6f383aff04aa0dacd2ca215be0, type: 3}
+      propertyPath: life
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 5659052173241815187, guid: fa756a6f383aff04aa0dacd2ca215be0, type: 3}
       propertyPath: m_Name
       value: Boy
@@ -961,6 +965,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 561846855}
+    - target: {fileID: 5444104869702750026, guid: e4898433fb6001146a97f5489b0aed43, type: 3}
+      propertyPath: speed
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 5444104869702750027, guid: e4898433fb6001146a97f5489b0aed43, type: 3}
       propertyPath: m_Name
       value: Challenge
